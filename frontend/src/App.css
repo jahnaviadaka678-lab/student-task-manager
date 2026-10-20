@@ -1,0 +1,166 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f3ff;
+  color: #252344;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  width: min(760px, 92%);
+  margin: 60px auto;
+  padding: 36px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px #29205b12;
+}
+
+header {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #7161db;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(28px, 5vw, 42px);
+}
+
+header > p:last-child,
+.empty {
+  color: #77758d;
+  line-height: 1.6;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  padding: 18px;
+  background: #f6f4ff;
+  border-radius: 12px;
+}
+
+.stat-card span {
+  display: block;
+  color: #77758d;
+  font-size: 13px;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 28px;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.task-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #dedcf0;
+  border-radius: 10px;
+  outline-color: #7161db;
+}
+
+button {
+  padding: 13px 17px;
+  border: none;
+  border-radius: 10px;
+  background: #7161db;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+.task-list h2 {
+  font-size: 22px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eeedf6;
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-wrap: anywhere;
+}
+
+.task label input {
+  accent-color: #7161db;
+}
+
+.done span {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.delete {
+  flex-shrink: 0;
+  background: #fff0f0;
+  color: #c33;
+}
+
+footer {
+  margin-top: 30px;
+  color: #88849e;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 22px;
+    margin: 25px auto;
+  }
+
+  .stats {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 12px;
+  }
+
+  .stat-card strong {
+    font-size: 23px;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+}
